@@ -91,7 +91,7 @@ nav li a:link {}
 ```
 
 ```html
-<nav class="nav-primary>
+<nav class="nav-primary">
   <ul class="nav-primary__list">
     <li class="nav-primary__list-item"><a class="nav-primary__list-link state-selected" href="#">Link 1</a></li>
     <li class="nav-primary__list-item"><a class="nav-primary__list-link" href="#">Link 2</a></li>
