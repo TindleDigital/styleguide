@@ -85,17 +85,17 @@ nav li a:link {}
 ```css
 .nav-primary {}
 .nav-primary__list {}
-.nav-primary_list-item {}
-.nav-primary_list-item-link {}
-.nav-primary_list-link.state-selected {}
+.nav-primary__list-item {}
+.nav-primary__list-item-link {}
+.nav-primary__list-link.state-selected {}
 ```
 
 ```html
 <nav class="nav-primary>
   <ul class="nav-primary__list">
-    <li class="nav-primary_list-item"><a class="nav-primary_list-link state-selected" href="#">Link 1</a></li>
-    <li class="nav-primary_list-item"><a class="nav-primary_list-link" href="#">Link 2</a></li>
-    <li class="nav-primary_list-item"><a class="nav-primary_list-link" href="#">Link 3</a></li>
+    <li class="nav-primary__list-item"><a class="nav-primary__list-link state-selected" href="#">Link 1</a></li>
+    <li class="nav-primary__list-item"><a class="nav-primary__list-link" href="#">Link 2</a></li>
+    <li class="nav-primary__list-item"><a class="nav-primary__list-link" href="#">Link 3</a></li>
   </ul>
 </nav>
 ```
