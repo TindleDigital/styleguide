@@ -48,10 +48,12 @@ nav li a:link {}```
 
 ### An imporvement would be this:
 
-`.nav-primary {}
+`css
+.nav-primary {}
 .nav-primary ul {}
 .nav-primary li {}
-.nav-primary li a:link {}`
+.nav-primary li a:link {}
+`
 
 `<nav class="nav-primary>
   <ul>
