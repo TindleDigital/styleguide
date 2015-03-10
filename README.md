@@ -1,12 +1,13 @@
 # Tindle Digital Styleguide [BETA]
 
-Our CSS has undertaken quite a few twists and turns over the last year, especially as other Styleguides have been made avaliable. AS We develop this styleguide i'll make it clear where some of our inspriration comes from, one main influence is the [Trello Styleguide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80#file-trello-css-guide-mdllo!)
+Our CSS has undertaken quite a few twists and turns over the last year, especially as other Styleguides have been made avaliable. As we develop this styleguide i'll make it clear where some of our inspriration comes from, one main influence is the [Trello Styleguide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80#file-trello-css-guide-mdllo!)
 
-There are a few main rules governing how we are writing CSS, they are:
+## There are a few main rules governing how we are writing CSS, they are:
 
 * All naming conventions must describe what they are and be as short as possible.
-* Only use classes not IDs.
+* Use classes not IDs.
 * Write as little as possible.
+* And make it as reusable as possible
 
 ## How it is written
 
