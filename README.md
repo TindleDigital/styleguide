@@ -1,6 +1,6 @@
-# Tindle Digital Styleguide
+# Tindle Digital Styleguide [BETA]
 
-Our CSS has undertaken quite a few twists and turns over the last year, especially as other Styleguide have been made avaliable.
+Our CSS has undertaken quite a few twists and turns over the last year, especially as other Styleguides have been made avaliable. AS We develop this styleguide i'll make it clear where some of our inspriration comes from, one main influence is the [Trello Styleguide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80#file-trello-css-guide-mdllo!)
 
 There are a few main rules governing how we are writing CSS, they are:
 
@@ -15,7 +15,8 @@ Using BEM (Block Element Modifier) in this way.
 * .block (the name of the object)
 * .block__element (the name of a component that is inside that object)
 * .block__element.mod-modifier (modifies that component to make it resuable in other ways)
-* .block__element.state-alert (creates an altered state such as highlighting text as an alert)
+* .block.mod-modifier (modifies that component to make it resuable in other ways)
+* .block__element.state-alert (also used to modify the block)
 
 ## How can we use this?
 
