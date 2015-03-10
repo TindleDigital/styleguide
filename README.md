@@ -27,7 +27,7 @@ You can apply .mod-modifier to modify the object or the component as such:
 .block__element.mod-modifier
 ```
 
-And in the HTML it would like like this for the first line above:
+And in the HTML it would look like this in the first example above:
 
 ```html
 <div class="block mod-modifier">
