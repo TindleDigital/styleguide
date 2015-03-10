@@ -1,4 +1,4 @@
-## Tindle Digital Styleguide
+# Tindle Digital Styleguide
 
 Our CSS has undertaken quite a few twists and turns over the last year, especially as other Styleguide have been made avaliable.
 
@@ -8,7 +8,7 @@ There are a few main rules governing how we are writing CSS, they are:
 * Only use classes not IDs.
 * Write as little as possible.
 
-# How it is written
+## How it is written
 
 Using BEM (Block Element Modifier) in this way.
 
@@ -17,16 +17,25 @@ Using BEM (Block Element Modifier) in this way.
 * .block__element.mod-modifier (modifies that component to make it resuable in other ways)
 * .block__element.state-alert (creates an altered state such as highlighting text as an alert)
 
-# How can we use this?
+## How can we use this?
 
 You can apply .mod-modifier to modify the object or the component as such:
+```css
+.block.mod-modifier
+.block__element.mod-modifier
+```
 
-* .block.mod-modifier
-* .block__element.mod-modifier
+And in the HTML it would like like this for the first line above:
+
+```html
+<div class="block mod-modifier">
+
+</div>
+```
 
 # Reducing Specifity
 
-Rather than digging through the dirt to target HTML we will use reusable but specific conventions, for example:
+Rather than digging through the dirt to get our styles applied we will use reusable but specific conventions, for example:
 
 1. Not this: `nav ul li li a:link`
 2. But rather something like this: `.nav-primary__link`
@@ -39,12 +48,13 @@ nav ul {}
 nav li {}
 nav li a:link {}
 ```
+
 ```html
 <nav>
   <ul>
-    <li><a href="">Link 1</a></li>
-    <li><a href="">Link 2</a></li>
-    <li><a href="">Link 3</a></li>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
   </ul>
 </nav>
 ```
@@ -74,15 +84,16 @@ nav li a:link {}
 .nav-primary {}
 .nav-primary__list {}
 .nav-primary_list-item {}
-.nav-primary_list-item.state-selected {}
+.nav-primary_list-item-link {}
+.nav-primary_list-link.state-selected {}
 ```
 
 ```html
 <nav class="nav-primary>
   <ul class="nav-primary__list">
-    <li class="nav-primary_list-item state-selected"><a href="#">Link 1</a></li>
-    <li class="nav-primary_list-item"><a href="#">Link 2</a></li>
-    <li class="nav-primary_list-item"><a href="#">Link 3</a></li>
+    <li class="nav-primary_list-item"><a class="nav-primary_list-link state-selected" href="#">Link 1</a></li>
+    <li class="nav-primary_list-item"><a class="nav-primary_list-link" href="#">Link 2</a></li>
+    <li class="nav-primary_list-item"><a class="nav-primary_list-link" href="#">Link 3</a></li>
   </ul>
 </nav>
 ```
