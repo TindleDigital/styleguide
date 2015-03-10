@@ -104,7 +104,11 @@ We think this also has the benefit of imporvoing performance as the browser does
 
 ## Use of HTML5
 
-We wont be hooking into HTML5 tags unless it is for smaller projects, this way we keep our CSS and HTML clearly seperate. Fro example:
+We wont be hooking into HTML5 tags unless it is for smaller projects, this way we keep our CSS and HTML clearly seperate. For example:
+
+```css
+header { }
+```
 
 ```html
 <header>
@@ -112,6 +116,10 @@ We wont be hooking into HTML5 tags unless it is for smaller projects, this way w
 ```
 
 Will be
+
+```css
+.page-head { }
+```
 
 ```html
 <header class="page-head">
