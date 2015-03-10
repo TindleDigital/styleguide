@@ -80,7 +80,7 @@ nav li a:link {}
 </nav>
 ```
 
-### A greater imporvement would be this
+### A greater improvement would be this
 
 ```css
 .nav-primary {}
