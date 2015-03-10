@@ -33,10 +33,10 @@ Rather than digging through the dirt to target HTML we will use reusable but spe
 
 ### To elaborate we wont do this:
 
-`nav {}
+```nav {}
 nav ul {}
 nav li {}
-nav li a:link {}`
+nav li a:link {}```
 
 `<nav>
   <ul>
