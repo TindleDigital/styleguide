@@ -86,7 +86,7 @@ nav li a:link {}
 .nav-primary {}
 .nav-primary__list {}
 .nav-primary__list-item {}
-.nav-primary__list-item-link {}
+.nav-primary__list-link {}
 .nav-primary__list-link.state-selected {}
 ```
 
