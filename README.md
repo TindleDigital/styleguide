@@ -101,3 +101,19 @@ nav li a:link {}
 ```
 
 We think this also has the benefit of imporvoing performance as the browser doesnt have to work so hard to finsd the appropriate CSS rules.
+
+## Use of HTML5
+
+We wont be hooking into HTML5 tags unless it is for smaller projects, this way we keep our CSS and HTML clearly seperate. Fro example:
+
+```html
+<header>
+</header>
+```
+
+Will be
+
+```html
+<header class="page-head">
+</header>
+```
