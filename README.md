@@ -125,3 +125,9 @@ Will be
 <header class="page-head">
 </header>
 ```
+
+## Page Layout (under consturction)
+
+1. Regions: Main sections of the layout, eg: header, footer, main, aside
+2. Objects: Objects within a region, eg: nav, lists, divs, banners, figures, article, sections, carousels
+3. Components: Something inside an object, eg: list items, images
