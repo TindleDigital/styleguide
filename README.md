@@ -34,7 +34,7 @@ And in the HTML it would like like this for the first line above:
 </div>
 ```
 
-# Reducing Specifity
+## Reducing Specifity
 
 Rather than digging through the dirt to get our styles applied we will use reusable but specific conventions, for example:
 
@@ -60,7 +60,7 @@ nav li a:link {}
 </nav>
 ```
 
-### An imporvement would be this:
+### Some improvement would be this:
 
 ```css
 .nav-primary {}
