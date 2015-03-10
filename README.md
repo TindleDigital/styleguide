@@ -28,23 +28,26 @@ You can apply .mod-modifier to modify the object or the component as such:
 
 Rather than digging through the dirt to target HTML we will use reusable but specific conventions, for example:
 
-1. Not this: nav ul li li a:link
-2. But rather something like this: .nav-primary__link
+1. Not this: `nav ul li li a:link`
+2. But rather something like this: `.nav-primary__link`
 
 ### To elaborate we wont do this:
 
-```nav {}
+```css
+nav {}
 nav ul {}
 nav li {}
-nav li a:link {}```
-
-`<nav>
+nav li a:link {}
+```
+```html
+<nav>
   <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
+    <li><a href="">Link 1</a></li>
+    <li><a href="">Link 2</a></li>
+    <li><a href="">Link 3</a></li>
   </ul>
-</nav>`
+</nav>
+```
 
 ### An imporvement would be this:
 
@@ -55,27 +58,33 @@ nav li a:link {}```
 .nav-primary li a:link {}
 ```
 
-`<nav class="nav-primary>
+```html
+<nav class="nav-primary>
   <ul>
     <li><a href="#">Link 1</a></li>
     <li><a href="#">Link 2</a></li>
     <li><a href="#">Link 3</a></li>
   </ul>
-</nav>`
+</nav>
+```
 
-### A greater imporvement would be this:
+### A greater imporvement would be this
 
-`.nav-primary {}
+```css
+.nav-primary {}
 .nav-primary__list {}
 .nav-primary_list-item {}
-.nav-primary_list-item.state-selected {}`
+.nav-primary_list-item.state-selected {}
+```
 
-`<nav class="nav-primary>
+```html
+<nav class="nav-primary>
   <ul class="nav-primary__list">
     <li class="nav-primary_list-item state-selected"><a href="#">Link 1</a></li>
     <li class="nav-primary_list-item"><a href="#">Link 2</a></li>
     <li class="nav-primary_list-item"><a href="#">Link 3</a></li>
   </ul>
-</nav>`
+</nav>
+```
 
 We think this also has the benefit of imporvoing performance as the browser doesnt have to work so hard to finsd the appropriate CSS rules.
