@@ -71,7 +71,7 @@ nav li a:link {}
 ```
 
 ```html
-<nav class="nav-primary>
+<nav class="nav-primary">
   <ul>
     <li><a href="#">Link 1</a></li>
     <li><a href="#">Link 2</a></li>
