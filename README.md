@@ -42,12 +42,16 @@ Utilities are resuable anywhere you need them, designated with a u- prefix. they
     .u-pull-left { }
     .u-clearfix { }
 
+### Mixins
+
 Mixins offer reusable styles that are common accross the website helping maintain the DRY rule. Use  m- to signal what the class does.
 
     .m-border-top { }
     .m-brand-colour { }
 
-### Modifiers modify a component's core styles.
+### Modifiers 
+
+To modify a component's core styles.
 
     .button { }
     .button.mod-button-lrg { } (inherits components style and modifies it)
@@ -57,15 +61,21 @@ In HTML would look like:
     <a class="button">Click</a>
     <a class="button mod-button-lrg">Click</a>
 
-Altered State of elelemt, similar to modifiers but for hightlighting a change in state, for example something is selcted or "alert" text is needed.
+### State
+
+Altered State of elelemt, similar to modifiers but for hightlighting a change in state, for example something is selected or "alert" text is needed.
 
     .button { }
     .button.is-button-select { }
+
+### Specifity
 
 Keep specificty to a minimum, this improves perfomance and makes code more readable.
 
     So we can use: .user-list > a:hover { } (supported IE8 up)
     Instead of: ul .user-list li span a:hover { }
+
+### Layout
 
 When it comes to the layout componenets on the page we want to give the various zones some hirachy eg:
 
@@ -73,16 +83,14 @@ When it comes to the layout componenets on the page we want to give the various 
     Components = anything in a region or block that isnt layout
     Blocks = Places that hold and orgainse the layout of components within a region. May not be called "region" but named by what they are doing.
 
-Maybe camelCase for IDs for coldfusion and js, indicates not a style but a function.
-
-## Use of IDs
+### Use of IDs
 
 IDs are only to be used for functional purposes, we are using ColdFusion and JavaScript, also a prefix will
 
     cf-doThis
     js-doThis
 
-## Use of HTML5
+### Use of HTML5
 
 We wont be hooking into HTML5 tags directly unless it is for smaller projects, this way we keep our CSS and HTML clearly seperate. 
 
