@@ -2,9 +2,12 @@
 
 So far we have built a BETA website without worrying to much about following CSS conventions such as B.E.M. 
 
-This has allowed the freedome to explore the design without getting too carried away on what the code looks like and how to maintain it, we followed a few rules of course to keep some order. Over the last few months the goal has been to turn back to the CSS and HTML and reverse enginere a maintainable and scalable architecture. Much of what we are doing now is heavily influenced by the 2 styleguides below, so thanks to those guys!
+This has allowed the freedome to explore the design without getting too carried away on what the code looks like and how to maintain it, we followed a few rules of course to keep some order. 
+
+Over the last few months the goal has been to turn back to the CSS and HTML and reverse enginere a maintainable and scalable architecture. Much of what we are doing now is heavily influenced by the 2 styleguides below, so thanks to those guys!
 
 [Trello Styleguide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80#file-trello-css-guide-mdllo!)
+
 [Medium Styleguide](https://gist.github.com/fat/a47b882eb5f84293c4ed)
 
 
