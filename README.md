@@ -1,133 +1,86 @@
-# Tindle Digital Styleguide [BETA]
+# Tindle Digital Styleguide
 
-Our CSS has undertaken quite a few twists and turns over the last year, especially as other Styleguides have been made avaliable. As we develop this styleguide i'll make it clear where some of our inspriration comes from, one main influence is the [Trello Styleguide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80#file-trello-css-guide-mdllo!)
+So far we have built a BETA website without worrying to much about following CSS conventions such as B.E.M. 
 
-## There are a few main rules governing how we are writing CSS, they are:
+This has allowed the freedome to explore the design without getting too carried away on what the code looks like and how to maintain it, we followed a few rules of course to keep some order. Over the last few months the goal has been to turn back to the CSS and HTML and reverse enginere a maintainable and scalable architecture. Much of what we are doing now is heavily influenced by the 2 styleguides below, so thanks to those guys!
 
-* All naming conventions must describe what they are and be as short as possible.
-* Use classes not IDs.
-* Write as little as possible.
-* And make it as reusable as possible
+[Trello Styleguide](https://gist.github.com/bobbygrace/9e961e8982f42eb91b80#file-trello-css-guide-mdllo!)
+[Medium Styleguide](https://gist.github.com/fat/a47b882eb5f84293c4ed)
 
-## How it is written
 
-Using BEM (Block Element Modifier) in this way.
+## Below i'll explain our CSS
 
-* .block (the name of the object)
-* .block__element (the name of a component that is inside that object)
-* .block__element.mod-modifier (modifies that component to make it resuable in other ways)
-* .block.mod-modifier (modifies that component to make it resuable in other ways)
-* .block__element.state-alert (also used to modify the block)
+The use of 1 hyphen is simply to make a compoenents name more readable if more than one word is needed. camelCase was also considered but for now was decided against. All component names need to be as short as possible providing the meaning is still prettr clear.
 
-## How can we use this?
+    .page-head { }
+    .pg-head { } porbably just as understandable and readable.
 
-You can apply .mod-modifier to modify the object or the component as such:
-```css
-.block.mod-modifier
-.block__element.mod-modifier
-```
+Two hyphens indicates a sub component (or desendant) of a component. Elsewhere you'll might see this done as .page-head__masterhead I personally feel this is a bit of a jerky reading experince hece opting for the double dashes.
 
-And in the HTML it would look like this in the first example above:
+    .page-head--masterhead { }
+    .pg-head--mast-head { } (just as understandable?)
+    .page-head--logo { }
 
-```html
-<div class="block mod-modifier">
+Naming conventions need to describe what it is first then its importance or role. It is essinatial that these words make sense and are clear what they do For example multiple navigation might be as such:
 
-</div>
-```
+    .nav-primary { }
+    .nav-secondary { }
+    .nav-dropdown { }
 
-## Reducing Specifity
+And this might be little too cryptic:
 
-Rather than digging through the dirt to get our styles applied we will use reusable but specific conventions, for example:
+    .nav-prim { }
+    .nav-scnd { }
+    .nav-dropd { }
 
-1. Not this: `nav ul li li a:link`
-2. But rather something like this: `.nav-primary__link`
+Utilities are resuable anywhere you need them, designated with a u- prefix. they typically are not styleistic in a design way but common layout "helpers".
 
-### To elaborate we wont do this:
+    .u-utility-name { }
+    .u-pull-left { }
+    .u-clearfix { }
 
-```css
-nav {}
-nav ul {}
-nav li {}
-nav li a:link {}
-```
+Mixins offer reusable styles that are common accross the website helping maintain the DRY rule. Use  m- to signal what the class does.
 
-```html
-<nav>
-  <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
-  </ul>
-</nav>
-```
+    .m-border-top { }
+    .m-brand-colour { }
 
-### Some improvement would be this:
+### Modifiers modify a component's core styles.
 
-```css
-.nav-primary {}
-.nav-primary ul {}
-.nav-primary li {}
-.nav-primary li a:link {}
-```
+    .button { }
+    .button.mod-button-lrg { } (inherits components style and modifies it)
 
-```html
-<nav class="nav-primary">
-  <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
-  </ul>
-</nav>
-```
+In HTML would look like:
 
-### A greater improvement would be this
+    <a class="button">Click</a>
+    <a class="button mod-button-lrg">Click</a>
 
-```css
-.nav-primary {}
-.nav-primary__list {}
-.nav-primary__list-item {}
-.nav-primary__list-link {}
-.nav-primary__list-link.state-selected {}
-```
+Altered State of elelemt, similar to modifiers but for hightlighting a change in state, for example something is selcted or "alert" text is needed.
 
-```html
-<nav class="nav-primary">
-  <ul class="nav-primary__list">
-    <li class="nav-primary__list-item"><a class="nav-primary__list-link state-selected" href="#">Link 1</a></li>
-    <li class="nav-primary__list-item"><a class="nav-primary__list-link" href="#">Link 2</a></li>
-    <li class="nav-primary__list-item"><a class="nav-primary__list-link" href="#">Link 3</a></li>
-  </ul>
-</nav>
-```
+    .button { }
+    .button.is-button-select { }
 
-We think this also has the benefit of imporvoing performance as the browser doesnt have to work so hard to finsd the appropriate CSS rules.
+Keep specificty to a minimum, this improves perfomance and makes code more readable.
+
+    So we can use: .user-list > a:hover { } (supported IE8 up)
+    Instead of: ul .user-list li span a:hover { }
+
+When it comes to the layout componenets on the page we want to give the various zones some hirachy eg:
+
+    Regions = Main parts of the page (header, main nav, content, sidebar and footer)
+    Components = anything in a region or block that isnt layout
+    Blocks = Places that hold and orgainse the layout of components within a region. May not be called "region" but named by what they are doing.
+
+Maybe camelCase for IDs for coldfusion and js, indicates not a style but a function.
+
+## Use of IDs
+
+IDs are only to be used for functional purposes, we are using ColdFusion and JavaScript, also a prefix will
+
+    cf-doThis
+    js-doThis
 
 ## Use of HTML5
 
-We wont be hooking into HTML5 tags unless it is for smaller projects, this way we keep our CSS and HTML clearly seperate. For example:
+We wont be hooking into HTML5 tags directly unless it is for smaller projects, this way we keep our CSS and HTML clearly seperate. 
 
-```css
-header { }
-```
 
-```html
-<header>
-</header>
-```
-
-Will be
-
-```css
-.page-head { }
-```
-
-```html
-<header class="page-head">
-</header>
-```
-
-## Page Layout (under consturction)
-
-1. Regions: Main sections of the layout, eg: header, footer, main, aside
-2. Objects: Objects within a region, eg: nav, lists, divs, banners, figures, article, sections, carousels
-3. Components: Something inside an object, eg: list items, images
