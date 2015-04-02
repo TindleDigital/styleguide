@@ -1,4 +1,4 @@
-# Tindle Digital Styleguide Outline
+# Tindle Digital CSS Guidelines
 
 So far we have built a BETA website without worrying to much about following CSS conventions such as B.E.M. This has allowed the freedom to explore the design without getting too carried away on what the code looks like and how to maintain it, we followed a few rules of course to keep some order. 
 
