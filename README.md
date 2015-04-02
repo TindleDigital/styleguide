@@ -71,15 +71,15 @@ Keep specificty to a minimum, this improves perfomance and makes code more reada
 
 ### Layout
 
-When it comes to the layout componenets on the page we want to give the various zones some hirachy eg:
+When it comes to the layout and componenets on the page we want to give the various zones some hirachy something like the below:
 
-    Regions = Main parts of the page (header, main nav, content, sidebar and footer)
-    Components = anything in a region or block that isnt layout
+    Regions = Main parts of the page (eg: header, nav, content, sidebar and footer),
     Blocks = Places that hold and orgainse the layout of components within a region. May not be called "region" but named by what they are doing.
-
+    Components = Anything in a region or block that isnt layout such as a list.
+    
 ### Use of IDs
 
-IDs are only to be used for functional purposes, we are using ColdFusion and JavaScript, also a prefix will
+IDs are only to be used for functional purposes, we are using ColdFusion and JavaScript, also a prefix identifies which.
 
     cf-doThis
     js-doThis
