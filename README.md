@@ -74,7 +74,7 @@ Keep specificty to a minimum, this improves perfomance and makes code more reada
 
 ### Layout
 
-When it comes to the layout and componenets on the page we want to give the various zones some hirachy something like the below:
+When it comes to the layout and components on the page we want to give the various zones some hirachy something like the below:
 
     Regions = Main parts of the page (eg: header, nav, content, sidebar and footer),
     Blocks = Places that hold and orgainse the layout of components within a region. May not be called "region" but named by what they are doing.
