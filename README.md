@@ -8,25 +8,28 @@ Over the last few months the goal has been to turn our attention back to the CSS
 
 [Medium Styleguide](https://gist.github.com/fat/a47b882eb5f84293c4ed)
 
-
-## How we'll be writing our CSS
-
-This is based on B.E.M methodology but filtered though the 2 styleguides above and various other sources. The use of 1 hyphen is simply to make a components name more readable that is if more than one word is needed. camelCase was also considered but for now was decided against. All component names need to be as short as possible providing the meaning is still clear. If the word reads just as well without hyphens then leave them out.
-
-    .page-head { }
-    .pg-head { } probably just as understandable and readable.
-
-Two hyphens indicate a sub component (or desendant) of a component. Elsewhere you might see this done as .page-head__masterhead This is a bit of a jerky reading experience hence opting for the double dashes.
-
-    .page-head--masterhead { }
-    .pg-head--masterhead { } (just as understandable?)
-    .pg-head--logo { }
+### Naming
 
 Naming conventions need to describe what it is then it's importance or role. It is essinatial that these words make sense and are clear what they do. For example multiple navigation uses might be as such:
 
     .nav-primary { }
     .nav-secondary { }
     .nav-dropdown { }
+
+### Components
+
+This is based on B.E.M methodology but filtered though the 2 styleguides above and various other sources. The use of 1 hyphen is simply to make a components name more readable that is if more than one word is needed. camelCase was also considered but for now was decided against. All component names need to be as short as possible providing the meaning is still clear. If the word reads just as well without hyphens then leave them out.
+
+    .page-head { }
+    .pg-head { } probably just as understandable and readable.
+
+### Desendants
+
+Two hyphens indicate a sub component (or desendant) of a component. Elsewhere you might see this done as .page-head__masterhead This is a bit of a jerky reading experience hence opting for the double dashes.
+
+    .page-head--masterhead { }
+    .pg-head--masterhead { } (just as understandable?)
+    .pg-head--logo { }
 
 ### Utilities
 
